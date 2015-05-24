@@ -1,7 +1,7 @@
 {
   "name": "react-rxjs",
   "version": "1.0.0",
-  "description": "",
+  "description": "React RxJs playground",
   "main": "index.js",
   "scripts": {
     "start": "webpack -wdc --progress",
@@ -9,9 +9,25 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Cmdv/React-RxJS.git"
   },
-  "author": "Vincent Orr",
+  "keywords": [
+    "react",
+    "reactjs",
+    "rxjs",
+    "data",
+    "webpack",
+    "webpack",
+    "auth",
+    "react-router",
+    "json"
+  ],
+  "author": "Vincent Orr <@_cmdv_> (http://github.com/cmdv)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cmdv/React-RxJS/issues"
+  },
+  "homepage": "https://github.com/gaearon/react-hot-boilerplate",
   "devDependencies": {
     "babel-core": "^5.1.11",
     "babel-loader": "^5.0.0",
