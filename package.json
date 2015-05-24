@@ -1,0 +1,23 @@
+{
+  "name": "react-rxjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack -wdc --progress",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Vincent Orr",
+  "devDependencies": {
+    "babel-core": "^5.1.11",
+    "babel-loader": "^5.0.0",
+    "keymirror": "^0.1.1",
+    "react": "^0.13.2",
+    "rx": "^2.5.2",
+    "webpack": "^1.8.9"
+  }
+}
