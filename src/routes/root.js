@@ -1,5 +1,4 @@
 var React = require('react');
-
 var Intent = require('../intent/Counter-intent');
 
 var Root = React.createClass({
