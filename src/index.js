@@ -41,9 +41,10 @@ var routes = (
 
 
 Router.run(routes, function (Handler) {
-  Model.subject.subscribe((appData) => {
+  Model.subject.subscribe((appState) => {
+    console.log(appState);
     React.render(
-      <Handler {...appState}/>,
+      <Handler {...appState} />,
       document.getElementById('app')
     );
   });
