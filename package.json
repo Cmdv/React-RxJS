@@ -35,5 +35,8 @@
     "react": "^0.13.2",
     "rx": "^2.5.2",
     "webpack": "^1.8.9"
+  },
+  "dependencies": {
+    "react-router": "^0.13.3"
   }
 }

@@ -1,7 +1,7 @@
 var React = require('react');
 var Intent = require('../intent/Counter-intent');
 
-var Root = React.createClass({
+var Home = React.createClass({
 
   handleIncrement () {
     Intent.incrementCounter();
@@ -12,7 +12,7 @@ var Root = React.createClass({
   },
 
   render() {
-    console.log('props', this.props);
+    console.log('props: ', this.props);
     return (
       <div>
         <h1>Hello</h1>
@@ -24,5 +24,5 @@ var Root = React.createClass({
   }
 });
 
-module.exports = Root;
+module.exports = Home;
 
