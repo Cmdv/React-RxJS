@@ -1,16 +1,16 @@
 var React = require('react');
 
-var Intent = require('../intent');
+var Intent = require('../intent/Counter-intent');
 
-class Root extends React.Component {
+var Root = React.createClass({
 
-  constructor() {
-    super();
+  handleIncrement () {
+    Intent.incrementCounter();
+  },
 
-    this.handleIncrement = function () {
-      Intent.incrementCounter();
-    }
-  }
+  handleDecrease () {
+    Intent.decreaseCounter();
+  },
 
   render() {
     console.log('props', this.props);
@@ -18,10 +18,12 @@ class Root extends React.Component {
       <div>
         <h1>Hello</h1>
         <p>counter: {this.props.counter}</p>
+        <button onClick={this.handleDecrease}>decrease</button>
         <button onClick={this.handleIncrement}>increment</button>
       </div>
     );
   }
-}
+});
 
 module.exports = Root;
+

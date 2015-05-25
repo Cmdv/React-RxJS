@@ -1,7 +1,9 @@
 var Rx = require('rx');
 
 var subjects = {
-  incrementCounterSubject: new Rx.Subject()
+  incrementCounterSubject: new Rx.Subject(),
+  decreaseCounterSubject: new Rx.Subject()
+
 };
 
 module.exports = {
@@ -9,5 +11,9 @@ module.exports = {
 
   incrementCounter: function () {
     subjects.incrementCounterSubject.onNext();
+  },
+
+  decreaseCounter: function () {
+    subjects.decreaseCounterSubject.onNext();
   }
 };
