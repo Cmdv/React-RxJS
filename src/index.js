@@ -37,6 +37,7 @@ var routes = (
 );
 
 const RouterObs = Rx.Observable.create(observer => {
+  console.log('poop');
   Router.run(routes, location, (Handler, state) => {
     observer.onNext({Handler, state});
   });
