@@ -1,17 +1,15 @@
-var React = require('react');
-var Rx = require('rx');
+var React = require('react'),
+  Rx = require('rx'),
+  Model = require('./models/Counter-model'),
+  Home = require('./routes/Home'),
+  About = require('./routes/About'),
+  Login = require('./routes/Login'),
+  Router = require('react-router'),
 
-var Model = require('./models/Counter-model');
-var Home = require('./routes/Home');
-var About = require('./routes/About');
-var Login = require('./routes/Login');
-
-var Router = require('react-router');
-
-var DefaultRoute = Router.DefaultRoute;
-var Link = Router.Link;
-var Route = Router.Route;
-var RouteHandler = Router.RouteHandler;
+  DefaultRoute = Router.DefaultRoute,
+  Link = Router.Link,
+  Route = Router.Route,
+  RouteHandler = Router.RouteHandler;
 
 var App = React.createClass({
   render: function () {
@@ -38,14 +36,23 @@ var routes = (
   </Route>
 );
 
-
-
-Router.run(routes, function (Handler) {
-  Model.subject.subscribe((appState) => {
-    console.log(appState);
-    React.render(
-      <Handler {...appState} />,
-      document.getElementById('app')
-    );
+const RouterObs = Rx.Observable.create(observer => {
+  Router.run(routes, location, (Handler, state) => {
+    observer.onNext({Handler, state});
   });
 });
+
+const subscription = Rx.Observable.combineLatest(
+  Model.subject,
+  RouterObs,
+  ((appState, { Handler, State }) => ({
+    appState,
+    Handler,
+    State
+  })))
+    .subscribe(({ appState, Handler, State }) => {
+      React.render(
+        <Handler {...appState}/>,
+        document.getElementById('app')
+      );
+    });

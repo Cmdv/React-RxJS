@@ -1,9 +1,8 @@
 var Rx = require('rx');
 var update = require('react/lib/update');
-
 var Intent = require('./../intent/Counter-intent');
-
 var subject = new Rx.ReplaySubject(1);
+
 
 var state = {
   counter: 0
