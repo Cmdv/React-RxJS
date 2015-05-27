@@ -22,7 +22,7 @@ var App = React.createClass({
             <li><Link to="login">Login</Link></li>
           </ul>
         </header>
-        <RouteHandler />
+        <RouteHandler {...this.props} />
       </div>
     );
   }
@@ -36,24 +36,13 @@ var routes = (
   </Route>
 );
 
-const RouterObs = Rx.Observable.create(observer => {
-  console.log('poop');
-  Router.run(routes, location, (Handler, state) => {
-    observer.onNext({Handler, state});
+
+
+Router.run(routes, function (Handler) {
+  Model.subject.subscribe((appState) => {
+    React.render(
+      <Handler {...appState}/>,
+      document.getElementById('app')
+    );
   });
 });
-
-const subscription = Rx.Observable.combineLatest(
-  Model.subject,
-  RouterObs,
-  ((appState, { Handler, State }) => ({
-    appState,
-    Handler,
-    State
-  })))
-    .subscribe(({ appState, Handler, State }) => {
-      React.render(
-        <Handler {...appState}/>,
-        document.getElementById('app')
-      );
-    });
