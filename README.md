@@ -11,11 +11,6 @@ A simple React application using RxJS instead of Flux. So far this is purely a w
 * [Webpack](https://github.com/webpack/webpack)
 * [React-Router](https://github.com/rackt/react-router)
 
-To get the React-router working I had great advice from:
-[BerkeleyTrue](https://github.com/BerkeleyTrue) on this git issue -> [git post](https://github.com/rackt/react-router/issues/1230)<br>
-and Anders Ekdahl on [stackoverflow](http://stackoverflow.com/questions/30469941/react-router-and-rxjs-data-flow/30475152?noredirect=1#comment49034545_30475152)
-
-Check out BerkeleyTrue's library [Thundercats.js](https://github.com/r3dm/thundercats) react + rxjs.<br>
 
 
 
@@ -34,5 +29,11 @@ In your fave browser `open index.html`.
 
 There really isn't that much information about using RxJS as a replacement to flux in react.
 Because of this any contributions will be greatly appreciated :)
+
+To get the React-router working I had great advice from:
+[BerkeleyTrue](https://github.com/BerkeleyTrue) on this git issue -> [git post](https://github.com/rackt/react-router/issues/1230)<br>
+and Anders Ekdahl on [stackoverflow](http://stackoverflow.com/questions/30469941/react-router-and-rxjs-data-flow/30475152?noredirect=1#comment49034545_30475152)
+
+Check out BerkeleyTrue's library [Thundercats.js](https://github.com/r3dm/thundercats) react + rxjs.<br>
 
 
