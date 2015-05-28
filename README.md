@@ -24,6 +24,7 @@ In your fave browser `open index.html`.
 
 * json interaction with API
 * jwt Auth
+* some form of css potentially framework for UI styling
 
 # Contribution
 
