@@ -10,7 +10,7 @@ A simple React application using RxJS instead of Flux. So far this is purely a w
 * [Babel](https://github.com/babel/babel)
 * [Webpack](https://github.com/webpack/webpack)
 * [React-Router](https://github.com/rackt/react-router)
-
+* Bootstrap for simple UI styling
 
 
 
@@ -24,7 +24,6 @@ In your fave browser `open index.html`.
 
 * json interaction with API
 * jwt Auth
-* some form of css potentially framework for UI styling
 
 # Contribution
 
