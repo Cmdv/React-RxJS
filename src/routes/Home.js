@@ -12,14 +12,19 @@ var Home = React.createClass({
   },
 
   render() {
-    console.log('props: ', this.props);
     return (
-      <div>
-        <h1>Hello</h1>
-        <p>counter: {this.props.counter}</p>
-        <button onClick={this.handleDecrease}>decrease</button>
-        <button onClick={this.handleIncrement}>increment</button>
+
+
+    <div className="jumbotron text-center">
+      <h1>Welcome to React + RxJS</h1>
+      <p>This is a template showcasing RxJS as a dataflow + React + React-router. This project will continue to grown implementing other use full real life examples! (well as close as) </p>
+
+      <div className="center-block text-center">
+        <h1>counter: {this.props.counter}</h1>
+        <button className="btn btn-lg btn-primary" onClick={this.handleDecrease}>decrease</button> {'  '}
+        <button className="btn btn-lg btn-primary" onClick={this.handleIncrement}>increment</button>
       </div>
+    </div>
     );
   }
 });

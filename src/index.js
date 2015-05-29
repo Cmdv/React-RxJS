@@ -14,16 +14,25 @@ var React = require('react'),
 var App = React.createClass({
   render: function () {
     return (
-      <div>
-        <header>
-          <ul>
-            <li><Link to="app">Home</Link></li>
-            <li><Link to="about">About</Link></li>
-            <li><Link to="login">Login</Link></li>
-          </ul>
-        </header>
+      <div className="container theme-showcase">
+        <nav className="navbar navbar-default">
+          <div className="container">
+            <div className="navbar-header">
+              <Link className="navbar-brand" to="app">React RxJS</Link>
+            </div>
+            <div className="navbar-collapse collapse">
+              <ul className="nav navbar-nav">
+                <li><Link to="app">Home</Link></li>
+                <li><Link to="about">About</Link></li>
+                <li><Link to="login">Login</Link></li>
+              </ul>
+              <button className="btn btn-default navbar-btn">counter: {this.props.counter}</button>
+            </div>
+          </div>
+        </nav>
         <RouteHandler {...this.props} />
       </div>
+
     );
   }
 });
