@@ -3,6 +3,8 @@
 A simple React application using RxJS instead of Flux. So far this is purely a way of extending [justinwoo](https://github.com/justinwoo) -> [react-rxjs-flow](https://github.com/justinwoo/react-rxjs-flow) with extra features.
 
 
+[VIEW DEMO](http://cmdv.github.io/React-RxJS/#/)
+
 
 # Tools so far
 
