@@ -26,7 +26,9 @@ var App = React.createClass({
                 <li><Link to="about">About</Link></li>
                 <li><Link to="login">Login</Link></li>
               </ul>
-              <button className="btn btn-default navbar-btn">counter: {this.props.counter}</button>
+              <button className="btn btn-default navbar-btn">counter: {this.props.counter}</button> {'  '}
+              <a href="https://github.com/Cmdv/React-RxJS/archive/master.zip" className="btn btn-default navbar-btn"><span className="glyphicon glyphicon-download-alt"></span>  Download zip</a> {'  '}
+              <a href="https://github.com/Cmdv/React-RxJS" className="btn btn-default navbar-btn">GitHub</a>
             </div>
           </div>
         </nav>

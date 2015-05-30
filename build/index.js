@@ -23567,6 +23567,21 @@
 	              { className: 'btn btn-default navbar-btn' },
 	              'counter: ',
 	              this.props.counter
+	            ),
+	            ' ',
+	            '  ',
+	            React.createElement(
+	              'a',
+	              { href: 'https://github.com/Cmdv/React-RxJS/archive/master.zip', className: 'btn btn-default navbar-btn' },
+	              React.createElement('span', { className: 'glyphicon glyphicon-download-alt' }),
+	              '  Download zip'
+	            ),
+	            ' ',
+	            '  ',
+	            React.createElement(
+	              'a',
+	              { href: 'https://github.com/Cmdv/React-RxJS', className: 'btn btn-default navbar-btn' },
+	              'GitHub'
 	            )
 	          )
 	        )
