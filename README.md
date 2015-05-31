@@ -27,6 +27,7 @@ In your fave browser `open index.html`.
 * json interaction with API
 * jwt Auth
 * CRUD / Firebase ?
+* 
 
 # Contribution
 
