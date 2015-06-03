@@ -4,6 +4,7 @@ import Model from './models/Counter-model';
 import Home from './routes/Home';
 import About from './routes/About';
 import Login from './routes/Login';
+import Json from './routes/Json';
 import Router from 'react-router';
 
 var DefaultRoute = Router.DefaultRoute,
@@ -24,6 +25,7 @@ var App = React.createClass({
               <ul className="nav navbar-nav">
                 <li><Link to="app">Home</Link></li>
                 <li><Link to="about">About</Link></li>
+                <li><Link to="json">Json</Link></li>
                 <li><Link to="login">Login</Link></li>
               </ul>
               <button className="btn btn-default navbar-btn">counter: {this.props.counter}</button> {'  '}
@@ -42,6 +44,7 @@ var App = React.createClass({
 var routes = (
   <Route name="app" path="/" handler={App}>
     <Route name="about" handler={About}/>
+    <Route name="json" handler={Json}/>
     <Route name="login" handler={Login}/>
     <DefaultRoute handler={Home}/>
   </Route>
