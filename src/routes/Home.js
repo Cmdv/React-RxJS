@@ -1,5 +1,5 @@
-var React = require('react');
-var Intent = require('../intent/Counter-intent');
+import React from 'react';
+import Intent from '../intent/Counter-intent';
 
 var Home = React.createClass({
 
@@ -13,8 +13,6 @@ var Home = React.createClass({
 
   render() {
     return (
-
-
     <div className="jumbotron text-center">
       <h1>Welcome to React + RxJS</h1>
       <p>This is a template showcasing RxJS as a dataflow + React + React-router. This project will continue to grown implementing other use full real life examples! (well as close as) </p>

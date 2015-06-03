@@ -1,4 +1,4 @@
-var Rx = require('rx');
+import Rx from 'rx';
 
 var subjects = {
   incrementCounterSubject: new Rx.Subject(),

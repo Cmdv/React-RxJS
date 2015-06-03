@@ -1,6 +1,6 @@
-var Rx = require('rx');
-var update = require('react/lib/update');
-var Intent = require('./../intent/Counter-intent');
+import Rx from 'rx';
+import update from 'react/lib/update';
+import Intent from './../intent/Counter-intent';
 var subject = new Rx.ReplaySubject(1);
 
 

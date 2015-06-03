@@ -1,5 +1,5 @@
-var React = require('react');
-var Intent = require('../intent/Counter-intent');
+import React from 'react';
+import Intent from '../intent/Counter-intent';
 
 var About = React.createClass({
 
