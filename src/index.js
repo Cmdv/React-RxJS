@@ -1,15 +1,15 @@
-var React = require('react'),
-  Rx = require('rx'),
-  Model = require('./models/Counter-model'),
-  Home = require('./routes/Home'),
-  About = require('./routes/About'),
-  Login = require('./routes/Login'),
-  Router = require('react-router'),
+import React from 'react';
+import Rx from 'rx';
+import Model from './models/Counter-model';
+import Home from './routes/Home';
+import About from './routes/About';
+import Login from './routes/Login';
+import Router from 'react-router';
 
-  DefaultRoute = Router.DefaultRoute,
-  Link = Router.Link,
-  Route = Router.Route,
-  RouteHandler = Router.RouteHandler;
+var DefaultRoute = Router.DefaultRoute,
+    Link = Router.Link,
+    Route = Router.Route,
+    RouteHandler = Router.RouteHandler;
 
 var App = React.createClass({
   render: function () {
