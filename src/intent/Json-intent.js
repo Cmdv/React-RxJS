@@ -1,19 +1,26 @@
 import Rx from 'rx';
+import Request from '../api/api-json';
 
-var dataSubject = {
-  getJsonSubject: new Rx.Subject(),
-  postJsonSubject: new Rx.Subject()
+var subjects = {
+  goGetJSON: new Rx.Subject(),
+  goPostJSON: new Rx.Subject()
 
 };
 
 module.exports = {
-  dataSubject: dataSubject,
+  subjects: subjects,
 
-  getJson: function () {
-    dataSubject.getJsonSubject.onNext();
+  getJSON: () => {
+    var buildRequest = Request.get('available');
+    var sub = buildRequest.subscribe( (body) => {
+      return subjects.goGetJSON.onNext(body);
+    });
   },
 
-  postJson: function () {
-    dataSubject.postJsonSubject.onNext();
+  postJSON: function () {
+    var buildRequest = Request.get('available');
+    var sub = buildRequest.subscribe( (body) => {
+      return subjects.goPostJSON.onNext(body);
+    });
   }
 };

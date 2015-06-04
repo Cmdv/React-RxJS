@@ -1,32 +1,31 @@
 import React from 'react';
-import IntentJson from '../intent/Json-intent';
+import Intent from '../intent/json-intent';
+import Results from '../components/Json-results';
 
-var Json = React.createClass({
+var JsonResults= React.createClass({
 
-  handleGetJson () {
-    IntentJson.getJson();
-  },
-
-  handlePostJson () {
-    IntentJson.postJson();
+  handleGetJSON () {
+    Intent.getJSON();
   },
 
   render() {
+
     return (
-      <div className="jumbotron text-center">
-        <h1>Lets get/post JSON</h1>
 
-        <div className="center-block text-center">
-          <h1>fetched data:</h1>
-          <p>{this.props.dataSubject}</p>
 
-          <button className="btn btn-lg btn-primary" onClick={this.handleGetJson}>Get JSON</button> {'  '}
-          <button className="btn btn-lg btn-primary" onClick={this.handlePostJson}>increment</button>
+      <div className="text-center">
+        <div className="page-header">
+          <h2>Lets pull in some JSON</h2>
+          <div className="center-block text-center">
+            <button className="btn btn-lg btn-primary" onClick={this.handleGetJSON}>Click to view bets</button>
+          </div>
+          <Results {...this.props} />
         </div>
       </div>
     );
   }
 });
 
-module.exports = Json;
+module.exports = JsonResults;
+
 

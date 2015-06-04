@@ -1,34 +1,40 @@
 import Rx from 'rx';
 import update from 'react/lib/update';
 import Intent from './../intent/Json-intent';
-var dataSubject = new Rx.ReplaySubject(1);
+
+
+var subject = new Rx.ReplaySubject(1);
 
 
 var state = {
-  data: {}
+  postResult: [],
+  results: []
 };
 
-Intent.dataSubject.getJsonSubject.subscribe(function () {
-  console.log('reaching here now');
+
+Intent.subjects.goGetJSON.subscribe((data) => {
+
   state = update(state, {
     $merge: {
-      data: state.data + 'a'
+      results: data
     }
   });
-  dataSubject.onNext(state);
+  subject.onNext(state);
 });
 
-Intent.dataSubject.postJsonSubject.subscribe(function () {
+
+
+Intent.subjects.goPostJSON.subscribe( (data) => {
   state = update(state, {
     $merge: {
-      data: state.data + 'b'
+      postResult: data
     }
   });
-  dataSubject.onNext(state);
+  subject.onNext(state);
 });
 
-dataSubject.onNext(state);
+subject.onNext(state);
 
 module.exports = {
-  dataSubject: dataSubject
+  subject: subject
 };
