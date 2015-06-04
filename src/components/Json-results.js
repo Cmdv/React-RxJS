@@ -1,5 +1,5 @@
 import React from 'react';
-import Intent from '../intent/Json-intent';
+import Intent from '../intent/json-intent';
 
 var JsonResults = React.createClass({
 
@@ -14,29 +14,22 @@ var JsonResults = React.createClass({
     var jsonData = this.props.results;
 
     var loopResults = () => {
-      jsonData.map((data) => {
-
-        if (data.id < 6 ) {
+      return jsonData.map((data) => {
           return (
             <ul>
               <li>
                 <h3 key={data.id} >{data.title}</h3>
-                <p key={data.id} >{data.body}</p>
-                <button key={4 + data.bet_id} className="btn btn-lg btn-primary" onClick={this.handlePostJSON.bind(this, data)}>Not working</button>
+                <p key={data.title} >{data.body}</p>
               </li>
             </ul>
           );
-        }
-
       })
     };
-
 
     return (
       <div>
         <h1>Results: </h1>
-
-        {loopResults}
+        {loopResults()}
       </div>
     )
   }

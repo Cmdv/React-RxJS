@@ -17,7 +17,7 @@ var JsonResults= React.createClass({
         <div className="page-header">
           <h2>Lets pull in some JSON</h2>
           <div className="center-block text-center">
-            <button className="btn btn-lg btn-primary" onClick={this.handleGetJSON}>Click to view bets</button>
+            <button className="btn btn-lg btn-primary" onClick={this.handleGetJSON}>Click to view JSON</button>
           </div>
           <Results {...this.props} />
         </div>

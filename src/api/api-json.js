@@ -3,7 +3,7 @@
 import request from 'superagent';
 import Rx from 'rx';
 
-var API_URL = 'http://jsonplaceholder.typicode.com';
+var API_URL = 'http://jsonplaceholder.typicode.com/';
 var HEADERS = {
   Accept: 'application/json'
 };
