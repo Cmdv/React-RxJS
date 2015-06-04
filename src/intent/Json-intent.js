@@ -11,7 +11,7 @@ module.exports = {
   subjects: subjects,
 
   getJSON: () => {
-    var buildRequest = Request.get('available');
+    var buildRequest = Request.get('posts');
     var sub = buildRequest.subscribe( (body) => {
       return subjects.goGetJSON.onNext(body);
     });
