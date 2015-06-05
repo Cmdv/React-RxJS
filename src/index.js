@@ -1,15 +1,16 @@
-var React = require('react'),
-  Rx = require('rx'),
-  Model = require('./models/Counter-model'),
-  Home = require('./routes/Home'),
-  About = require('./routes/About'),
-  Login = require('./routes/Login'),
-  Router = require('react-router'),
+import React from 'react';
+import Rx from 'rx';
+import Model from './models/State-model';
+import Home from './routes/Home';
+import About from './routes/About';
+import Login from './routes/Login';
+import Json from './routes/Json';
+import Router from 'react-router';
 
-  DefaultRoute = Router.DefaultRoute,
-  Link = Router.Link,
-  Route = Router.Route,
-  RouteHandler = Router.RouteHandler;
+var DefaultRoute = Router.DefaultRoute,
+    Link = Router.Link,
+    Route = Router.Route,
+    RouteHandler = Router.RouteHandler;
 
 var App = React.createClass({
   render: function () {
@@ -24,6 +25,7 @@ var App = React.createClass({
               <ul className="nav navbar-nav">
                 <li><Link to="app">Home</Link></li>
                 <li><Link to="about">About</Link></li>
+                <li><Link to="json">Json</Link></li>
                 <li><Link to="login">Login</Link></li>
               </ul>
               <button className="btn btn-default navbar-btn">counter: {this.props.counter}</button> {'  '}
@@ -42,6 +44,7 @@ var App = React.createClass({
 var routes = (
   <Route name="app" path="/" handler={App}>
     <Route name="about" handler={About}/>
+    <Route name="json" handler={Json}/>
     <Route name="login" handler={Login}/>
     <DefaultRoute handler={Home}/>
   </Route>
