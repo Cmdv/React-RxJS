@@ -1,6 +1,6 @@
 import React from 'react';
 import Rx from 'rx';
-import Model from './models/Counter-model';
+import Model from './models/State-model';
 import Home from './routes/Home';
 import About from './routes/About';
 import Login from './routes/Login';
