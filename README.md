@@ -12,6 +12,7 @@ A simple React application using RxJS instead of Flux. So far this is purely a w
 * [Babel](https://github.com/babel/babel)
 * [Webpack](https://github.com/webpack/webpack)
 * [React-Router](https://github.com/rackt/react-router)
+* [Superagent](https://github.com/visionmedia/superagent)
 * Bootstrap for simple UI styling
 
 
@@ -24,10 +25,9 @@ In your fave browser `open index.html`.
 
 # ToDos:
 
-* json interaction with API
+* json POST
 * jwt Auth
 * CRUD / Firebase ?
-* 
 
 # Contribution
 
