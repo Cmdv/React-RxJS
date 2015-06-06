@@ -1,5 +1,8 @@
 # react-rxjs
 
+There really isn't that much information about using RxJS as a replacement to flux in react.
+Because of this any contributions will be greatly appreciated :)
+
 A simple React application using RxJS instead of Flux. So far this is purely a way of extending [justinwoo](https://github.com/justinwoo) -> [react-rxjs-flow](https://github.com/justinwoo/react-rxjs-flow) with extra features.
 
 
@@ -30,9 +33,6 @@ In your fave browser `open index.html`.
 * CRUD / Firebase ?
 
 # Contribution
-
-There really isn't that much information about using RxJS as a replacement to flux in react.
-Because of this any contributions will be greatly appreciated :)
 
 To get the React-router working I had great advice from:
 [BerkeleyTrue](https://github.com/r3dm/thundercats) on this git issue -> [git post](https://github.com/rackt/react-router/issues/1230)<br>
