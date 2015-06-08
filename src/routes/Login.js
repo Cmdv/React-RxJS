@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class extends React.Component {
+var Login = React.createClass({
   render() {
     return (
         <div className="jumbotron text-center">
@@ -8,4 +8,8 @@ export default class extends React.Component {
         </div>
     );
   }
-}
+});
+
+module.exports = Login;
+
+

@@ -2,10 +2,10 @@ import React from 'react';
 import Intent from '../intent/json-intent';
 import Results from '../components/Json-results';
 
-export default class extends React.Component {
+var JsonResults = React.createClass({
   handleGetJSON () {
     Intent.getJSON();
-  }
+  },
 
   render() {
     return (
@@ -20,6 +20,6 @@ export default class extends React.Component {
         </div>
     );
   }
-}
+});
 
-
+module.exports = JsonResults;

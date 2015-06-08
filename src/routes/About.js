@@ -1,14 +1,14 @@
 import React from 'react';
 import Intent from '../intent/Counter-intent';
 
-export default class extends React.Component {
+var About = React.createClass({
   handleIncrement () {
     Intent.incrementCounter();
-  }
+  },
 
   handleDecrease () {
     Intent.decreaseCounter();
-  }
+  },
 
   render() {
     return (
@@ -22,4 +22,6 @@ export default class extends React.Component {
         </div>
     );
   }
-}
+});
+
+module.exports = About;

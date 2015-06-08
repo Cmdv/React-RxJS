@@ -12,7 +12,7 @@ var DefaultRoute = Router.DefaultRoute,
     Route = Router.Route,
     RouteHandler = Router.RouteHandler;
 
-class App extends React.Component {
+var App = React.createClass({
     render() {
         return (
             <div className="container theme-showcase">
@@ -43,7 +43,7 @@ class App extends React.Component {
 
         );
     }
-}
+});
 
 var routes = (
     <Route name="app" path="/" handler={App}>
