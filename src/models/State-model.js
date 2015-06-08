@@ -30,7 +30,7 @@ IntentCounter.subjects.decreaseCounterSubject.subscribe(function () {
 });
 
 
-IntentJSON.jsonSubjects.goGetJSON.subscribe((data) => {
+IntentJSON.jsonSubjects.goGetJSON.subscribe(data => {
   state = update(state, {
     $merge: {
       results: data
@@ -39,7 +39,7 @@ IntentJSON.jsonSubjects.goGetJSON.subscribe((data) => {
   subject.onNext(state);
 });
 
-IntentJSON.jsonSubjects.goPostJSON.subscribe((data) => {
+IntentJSON.jsonSubjects.goPostJSON.subscribe(data => {
   state = update(state, {
     $merge: {
       postResult: data
@@ -50,6 +50,6 @@ IntentJSON.jsonSubjects.goPostJSON.subscribe((data) => {
 
 subject.onNext(state);
 
-module.exports = {
-  subject: subject
+export default {
+  subject
 };
