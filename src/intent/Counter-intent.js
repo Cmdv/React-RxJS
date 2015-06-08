@@ -6,14 +6,8 @@ var subjects = {
 
 };
 
-module.exports = {
-  subjects: subjects,
-
-  incrementCounter: function () {
-    subjects.incrementCounterSubject.onNext();
-  },
-
-  decreaseCounter: function () {
-    subjects.decreaseCounterSubject.onNext();
-  }
+export default {
+  subjects,
+  incrementCounter: () => subjects.incrementCounterSubject.onNext(),
+  decreaseCounter: () => subjects.decreaseCounterSubject.onNext()
 };

@@ -7,20 +7,8 @@ var jsonSubjects = {
 
 };
 
-module.exports = {
-  jsonSubjects: jsonSubjects,
-
-  getJSON: () => {
-    var buildRequest = Request.get('posts');
-    var sub = buildRequest.subscribe( (body) => {
-      return jsonSubjects.goGetJSON.onNext(body);
-    });
-  },
-
-  postJSON: function () {
-    var buildRequest = Request.get('available');
-    var sub = buildRequest.subscribe( (body) => {
-      return jsonSubjects.goPostJSON.onNext(body);
-    });
-  }
+export default {
+  jsonSubjects,
+  getJSON: () => Request.get('posts').subscribe(::jsonSubjects.goGetJSON.onNext),
+  postJSON: () => Request.get('available').subscribe(::jsonSubjects.goPostJSON.onNext)
 };
