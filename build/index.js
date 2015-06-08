@@ -99,112 +99,114 @@
 	    RouteHandler = _reactRouter2['default'].RouteHandler;
 	
 	var App = _react2['default'].createClass({
-	  displayName: 'App',
+	    displayName: 'App',
 	
-	  render: function render() {
-	    return _react2['default'].createElement(
-	      'div',
-	      { className: 'container theme-showcase' },
-	      _react2['default'].createElement(
-	        'nav',
-	        { className: 'navbar navbar-default' },
-	        _react2['default'].createElement(
-	          'div',
-	          { className: 'container' },
-	          _react2['default'].createElement(
+	    render: function render() {
+	        return _react2['default'].createElement(
 	            'div',
-	            { className: 'navbar-header' },
+	            { className: 'container theme-showcase' },
 	            _react2['default'].createElement(
-	              Link,
-	              { className: 'navbar-brand', to: 'app' },
-	              'React RxJS'
-	            )
-	          ),
-	          _react2['default'].createElement(
-	            'div',
-	            { className: 'navbar-collapse collapse' },
-	            _react2['default'].createElement(
-	              'ul',
-	              { className: 'nav navbar-nav' },
-	              _react2['default'].createElement(
-	                'li',
-	                null,
+	                'nav',
+	                { className: 'navbar navbar-default' },
 	                _react2['default'].createElement(
-	                  Link,
-	                  { to: 'app' },
-	                  'Home'
+	                    'div',
+	                    { className: 'container' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'navbar-header' },
+	                        _react2['default'].createElement(
+	                            Link,
+	                            { className: 'navbar-brand', to: 'app' },
+	                            'React RxJS'
+	                        )
+	                    ),
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'navbar-collapse collapse' },
+	                        _react2['default'].createElement(
+	                            'ul',
+	                            { className: 'nav navbar-nav' },
+	                            _react2['default'].createElement(
+	                                'li',
+	                                null,
+	                                _react2['default'].createElement(
+	                                    Link,
+	                                    { to: 'app' },
+	                                    'Home'
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'li',
+	                                null,
+	                                _react2['default'].createElement(
+	                                    Link,
+	                                    { to: 'about' },
+	                                    'About'
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'li',
+	                                null,
+	                                _react2['default'].createElement(
+	                                    Link,
+	                                    { to: 'json' },
+	                                    'Json'
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'li',
+	                                null,
+	                                _react2['default'].createElement(
+	                                    Link,
+	                                    { to: 'login' },
+	                                    'Login'
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'button',
+	                            { className: 'btn btn-default navbar-btn' },
+	                            'counter: ',
+	                            this.props.counter
+	                        ),
+	                        '  ',
+	                        _react2['default'].createElement(
+	                            'a',
+	                            { href: 'https://github.com/Cmdv/React-RxJS/archive/master.zip',
+	                                className: 'btn btn-default navbar-btn' },
+	                            _react2['default'].createElement('span', {
+	                                className: 'glyphicon glyphicon-download-alt' }),
+	                            ' Download zip'
+	                        ),
+	                        ' ',
+	                        '  ',
+	                        _react2['default'].createElement(
+	                            'a',
+	                            { href: 'https://github.com/Cmdv/React-RxJS',
+	                                className: 'btn btn-default navbar-btn' },
+	                            'GitHub'
+	                        )
+	                    )
 	                )
-	              ),
-	              _react2['default'].createElement(
-	                'li',
-	                null,
-	                _react2['default'].createElement(
-	                  Link,
-	                  { to: 'about' },
-	                  'About'
-	                )
-	              ),
-	              _react2['default'].createElement(
-	                'li',
-	                null,
-	                _react2['default'].createElement(
-	                  Link,
-	                  { to: 'json' },
-	                  'Json'
-	                )
-	              ),
-	              _react2['default'].createElement(
-	                'li',
-	                null,
-	                _react2['default'].createElement(
-	                  Link,
-	                  { to: 'login' },
-	                  'Login'
-	                )
-	              )
 	            ),
-	            _react2['default'].createElement(
-	              'button',
-	              { className: 'btn btn-default navbar-btn' },
-	              'counter: ',
-	              this.props.counter
-	            ),
-	            ' ',
-	            '  ',
-	            _react2['default'].createElement(
-	              'a',
-	              { href: 'https://github.com/Cmdv/React-RxJS/archive/master.zip', className: 'btn btn-default navbar-btn' },
-	              _react2['default'].createElement('span', { className: 'glyphicon glyphicon-download-alt' }),
-	              '  Download zip'
-	            ),
-	            ' ',
-	            '  ',
-	            _react2['default'].createElement(
-	              'a',
-	              { href: 'https://github.com/Cmdv/React-RxJS', className: 'btn btn-default navbar-btn' },
-	              'GitHub'
-	            )
-	          )
-	        )
-	      ),
-	      _react2['default'].createElement(RouteHandler, this.props)
-	    );
-	  }
+	            _react2['default'].createElement(RouteHandler, this.props)
+	        );
+	    }
 	});
 	
 	var routes = _react2['default'].createElement(
-	  Route,
-	  { name: 'app', path: '/', handler: App },
-	  _react2['default'].createElement(Route, { name: 'about', handler: _routesAbout2['default'] }),
-	  _react2['default'].createElement(Route, { name: 'json', handler: _routesJson2['default'] }),
-	  _react2['default'].createElement(Route, { name: 'login', handler: _routesLogin2['default'] }),
-	  _react2['default'].createElement(DefaultRoute, { handler: _routesHome2['default'] })
+	    Route,
+	    { name: 'app', path: '/', handler: App },
+	    _react2['default'].createElement(Route, { name: 'about', handler: _routesAbout2['default'] }),
+	    _react2['default'].createElement(Route, { name: 'json', handler: _routesJson2['default'] }),
+	    _react2['default'].createElement(Route, { name: 'login', handler: _routesLogin2['default'] }),
+	    _react2['default'].createElement(DefaultRoute, { handler: _routesHome2['default'] })
 	);
 	
 	_reactRouter2['default'].run(routes, function (Handler) {
-	  _modelsStateModel2['default'].subject.subscribe(function (appState) {
-	    _react2['default'].render(_react2['default'].createElement(Handler, appState), document.getElementById('app'));
-	  });
+	    return _modelsStateModel2['default'].subject.subscribe(function (appState) {
+	        return _react2['default'].render(_react2['default'].createElement(Handler, appState), document.getElementById('app'));
+	    });
 	});
 
 /***/ },
@@ -21126,6 +21128,10 @@
 
 	'use strict';
 	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
 	var _rx = __webpack_require__(/*! rx */ 160);
@@ -21138,17 +21144,16 @@
 	
 	};
 	
-	module.exports = {
+	exports['default'] = {
 	  subjects: subjects,
-	
 	  incrementCounter: function incrementCounter() {
-	    subjects.incrementCounterSubject.onNext();
+	    return subjects.incrementCounterSubject.onNext();
 	  },
-	
 	  decreaseCounter: function decreaseCounter() {
-	    subjects.decreaseCounterSubject.onNext();
+	    return subjects.decreaseCounterSubject.onNext();
 	  }
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 160 */
@@ -31911,6 +31916,10 @@
 
 	'use strict';
 	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
 	var _rx = __webpack_require__(/*! rx */ 160);
@@ -31975,9 +31984,10 @@
 	
 	subject.onNext(state);
 	
-	module.exports = {
+	exports['default'] = {
 	  subject: subject
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 163 */
@@ -32165,6 +32175,10 @@
 
 	'use strict';
 	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
 	var _rx = __webpack_require__(/*! rx */ 160);
@@ -32181,23 +32195,20 @@
 	
 	};
 	
-	module.exports = {
+	exports['default'] = {
 	  jsonSubjects: jsonSubjects,
-	
 	  getJSON: function getJSON() {
-	    var buildRequest = _apiApiJson2['default'].get('posts');
-	    var sub = buildRequest.subscribe(function (body) {
-	      return jsonSubjects.goGetJSON.onNext(body);
-	    });
-	  },
+	    var _context;
 	
+	    return _apiApiJson2['default'].get('posts').subscribe((_context = jsonSubjects.goGetJSON).onNext.bind(_context));
+	  },
 	  postJSON: function postJSON() {
-	    var buildRequest = _apiApiJson2['default'].get('available');
-	    var sub = buildRequest.subscribe(function (body) {
-	      return jsonSubjects.goPostJSON.onNext(body);
-	    });
+	    var _context2;
+	
+	    return _apiApiJson2['default'].get('available').subscribe((_context2 = jsonSubjects.goPostJSON).onNext.bind(_context2));
 	  }
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 165 */
@@ -32207,6 +32218,10 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
@@ -32224,26 +32239,22 @@
 	};
 	
 	var buildRequest = function buildRequest(httpMethod, apiMethod, params) {
-	  var url = API_URL + apiMethod;
-	  var paramsTransport = httpMethod === 'get' ? 'query' : 'send';
-	
-	  var sendRequest = _rx2['default'].Observable.create(function (cb) {
-	    return _superagent2['default'][httpMethod](url).set(HEADERS)[paramsTransport](params).end(function (error, res) {
-	      cb.onNext(res.body);
+	  return _rx2['default'].Observable.create(function (cb) {
+	    return _superagent2['default'][httpMethod](API_URL + apiMethod).set(HEADERS)[httpMethod === 'get' ? 'query' : 'send'](params).end(function (error, res) {
+	      return cb.onNext(res.body);
 	    });
 	  });
-	  return sendRequest;
 	};
 	
-	module.exports = {
+	exports['default'] = {
 	  get: function get(apiMethod) {
 	    return buildRequest('get', apiMethod);
 	  },
-	
 	  post: function post(apiMethod, params) {
 	    return buildRequest('post', apiMethod, params);
 	  }
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 166 */
@@ -33718,7 +33729,6 @@
 	  },
 	
 	  render: function render() {
-	
 	    return _react2['default'].createElement(
 	      'div',
 	      { className: 'text-center' },
@@ -33767,52 +33777,52 @@
 	var _intentJsonIntent2 = _interopRequireDefault(_intentJsonIntent);
 	
 	var JsonResults = _react2['default'].createClass({
-	  displayName: 'JsonResults',
+	    displayName: 'JsonResults',
 	
-	  handlePostJSON: function handlePostJSON(data) {
-	    //function for sending JSON call just need to grab input.value and make a Math.random for the keys of each object
+	    handlePostJSON: function handlePostJSON(data) {
+	        //function for sending JSON call just need to grab input.value and make a Math.random for the keys of each object
 	
-	    console.log('getJSON' + data.event);
-	    //Intent.getJSON('bets', {bet_id: data.bet_id, odds: data.odds, stake: data.stake});
-	  },
+	        console.log('getJSON' + data.event);
+	        //Intent.getJSON('bets', {bet_id: data.bet_id, odds: data.odds, stake: data.stake});
+	    },
 	
-	  render: function render() {
-	    var jsonData = this.props.results;
+	    render: function render() {
+	        var jsonData = this.props.results;
 	
-	    var loopResults = function loopResults() {
-	      return jsonData.map(function (data) {
+	        var loopResults = function loopResults() {
+	            return jsonData.map(function (data) {
+	                return _react2['default'].createElement(
+	                    'li',
+	                    { className: 'list-group-item' },
+	                    _react2['default'].createElement(
+	                        'h4',
+	                        { className: 'list-group-item-heading', key: data.id },
+	                        data.title
+	                    ),
+	                    _react2['default'].createElement(
+	                        'p',
+	                        { className: 'list-group-item-text', key: data.title },
+	                        data.body
+	                    )
+	                );
+	            });
+	        };
+	
 	        return _react2['default'].createElement(
-	          'ul',
-	          null,
-	          _react2['default'].createElement(
-	            'li',
+	            'div',
 	            null,
 	            _react2['default'].createElement(
-	              'h3',
-	              { key: data.id },
-	              data.title
+	                'h1',
+	                null,
+	                'Results: '
 	            ),
 	            _react2['default'].createElement(
-	              'p',
-	              { key: data.title },
-	              data.body
+	                'ul',
+	                { className: 'list-group' },
+	                loopResults()
 	            )
-	          )
 	        );
-	      });
-	    };
-	
-	    return _react2['default'].createElement(
-	      'div',
-	      null,
-	      _react2['default'].createElement(
-	        'h1',
-	        null,
-	        'Results: '
-	      ),
-	      loopResults()
-	    );
-	  }
+	    }
 	});
 	
 	module.exports = JsonResults;
