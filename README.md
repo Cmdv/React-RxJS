@@ -31,6 +31,7 @@ In your fave browser `open index.html`.
 * json POST
 * jwt Auth
 * CRUD / Firebase ?
+* Animations
 
 # Contribution
 
