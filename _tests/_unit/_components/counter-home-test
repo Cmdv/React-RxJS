@@ -7,10 +7,10 @@ describe('Counter', function() {
     var React = require('react/addons');
     var TestUtils = React.addons.TestUtils;
 
-    var NavBar = require(__path__);
-    var Component = TestUtils.renderIntoDocument(<NavBar><ul></ul></NavBar>);
+    var Home = require(__path__);
+    var Component = TestUtils.renderIntoDocument();
 
-    var element = TestUtils.findRenderedDOMComponentWithClass(Component, 'ns-NavBar');
+    var element = TestUtils.findRenderedDOMComponentWithClass();
     expect(element).toBeDefined();
   });
 });
