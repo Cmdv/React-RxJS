@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack -wdc --progress",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -28,9 +28,32 @@
     "url": "https://github.com/Cmdv/React-RxJS/issues"
   },
   "homepage": "https://github.com/gaearon/react-hot-boilerplate",
+
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx"
+    ],
+    "testFileExtensions": [
+      "js"
+    ],
+    "testDirectoryName": "_unit",
+    "testPathDirs": [
+      "<rootDir>/_tests/"
+    ]
+  },
+
+
   "devDependencies": {
     "babel-core": "^5.1.11",
     "babel-loader": "^5.0.0",
+    "babel-jest": "^5.0.1",
+    "jest-cli": "^0.4.12",
     "keymirror": "^0.1.1",
     "react": "^0.13.2",
     "rx": "^2.5.2",
