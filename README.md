@@ -1,9 +1,8 @@
 # react-rxjs
 
-There really isn't that much information about using RxJS as a replacement to flux in react.
-Because of this any contributions are welcomed :)
+This is a simple React application using RxJS instead of Flux as a data flow.
 
-This is a simple React application using RxJS instead of Flux. This is an extension of [justinwoo](https://github.com/justinwoo) -> [react-rxjs-flow](https://github.com/justinwoo/react-rxjs-flow) with loads of extra features.
+Inspired by [justinwoo](https://github.com/justinwoo) -> [react-rxjs-flow](https://github.com/justinwoo/react-rxjs-flow) and extending it to show how RxJS can work in different situations together with React.
 
 
 [VIEW DEMO](http://cmdv.github.io/React-RxJS/#/)
@@ -33,7 +32,12 @@ In your fave browser `open index.html`.
 * CRUD / Firebase ?
 * Animations
 
-# Contribution
+
+
+There really isn't that much information about using RxJS as a replacement to flux in react.
+Because of this any contributions are welcomed :)
+
+# Contributions
 
 [Denis Stoyanov](https://github.com/xgrommx) with some aditional ES6 + clarification
 
