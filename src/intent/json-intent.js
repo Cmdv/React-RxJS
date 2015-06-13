@@ -9,6 +9,6 @@ var jsonSubjects = {
 
 export default {
   jsonSubjects,
-  getJSON: () => Request.get('posts').subscribe(::jsonSubjects.goGetJSON.onNext),
+  getJSON: () =>  Request.get('posts').subscribe(::jsonSubjects.goGetJSON.onNext),
   postJSON: () => Request.get('available').subscribe(::jsonSubjects.goPostJSON.onNext)
 };

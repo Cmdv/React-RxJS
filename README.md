@@ -31,8 +31,11 @@ In your fave browser `open index.html`.
 * json POST
 * jwt Auth
 * CRUD / Firebase ?
+* Animations
 
 # Contribution
+
+[Denis Stoyanov](https://github.com/xgrommx) with some aditional ES6 + clarification
 
 To get the React-router working I had great advice from:
 [BerkeleyTrue](https://github.com/r3dm/thundercats) on this git issue -> [git post](https://github.com/rackt/react-router/issues/1230)<br>
