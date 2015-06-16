@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/Cmdv/React-RxJS/issues"
   },
-  "homepage": "https://github.com/gaearon/react-hot-boilerplate",
+  "homepage": "https://github.com/Cmdv/React-RxJS/",
 
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
