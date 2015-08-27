@@ -4,8 +4,10 @@
   "description": "React RxJs playground",
   "main": "index.js",
   "scripts": {
-    "start": "webpack -wdc --progress",
-    "test": "jest"
+    "start": "node server.js",
+    "build": "webpack --progress --colors --config webpack.production.config.js",
+    "clean": "rm -rf build/",
+    "test": "testem"
   },
   "repository": {
     "type": "git",
@@ -29,37 +31,23 @@
   },
   "homepage": "https://github.com/Cmdv/React-RxJS/",
 
-  "jest": {
-    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
-    "unmockedModulePathPatterns": [
-      "<rootDir>/node_modules/react"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "jsx"
-    ],
-    "testFileExtensions": [
-      "js"
-    ],
-    "testDirectoryName": "_unit",
-    "testPathDirs": [
-      "<rootDir>/_tests/"
-    ]
-  },
-
-
   "devDependencies": {
-    "babel-core": "^5.1.11",
-    "babel-loader": "^5.0.0",
-    "babel-jest": "^5.0.1",
-    "jest-cli": "^0.4.12",
-    "keymirror": "^0.1.1",
-    "react": "^0.13.2",
+    "babel-core": "^5.7.4",
+    "babel-loader": "^5.3.2",
+    "glob": "^5.0.3",
+    "install": "^0.1.8",
+    "node-libs-browser": "^0.5.2",
+    "path": "^0.11.14",
+    "react-hot-loader": "^1.1.7",
     "rx": "^2.5.2",
-    "webpack": "^1.8.9"
+    "tape": "^4.0.1",
+    "testem": "^0.7.5",
+    "webpack": "^1.10.1",
+    "webpack-dev-server": "^1.7.0",
+    "keymirror": "^0.1.1"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "react": "*",
     "react-router": "^0.13.3",
     "superagent": "^1.2.0"
   }

@@ -1,31 +1,41 @@
+var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
+  devtool: 'eval',
 
-  entry: [
-    './src/index'
-  ],
-
-  output: {
-    path: path.join(__dirname, 'build'),
-    filename: 'index.js'
+  entry: {
+    app: [
+      'webpack-dev-server/client?http://0.0.0.0:3000',
+      'webpack/hot/only-dev-server',
+      './src/index'
+    ]
   },
 
-  module: {
-    loaders: [{
-      test: function (filename) {
-        if (filename.indexOf('node_modules') !== -1) {
-          return false;
-        } else {
-          return /\.js$/.test(filename) !== -1;
-        }
-      },
-      loaders: ['babel-loader']
-    }]
+  output: {
+    filename: '[name].js',
+    path: path.join(__dirname, './build'),
+    publicPath: '/build/'
   },
 
   resolve: {
-    modulesDirectories: [path.join(__dirname, 'src'), 'node_modules']
-  }
+    extensions: ['', '.js', '.jsx'],
+    modulesDirectories: ['src', 'node_modules']
+  },
+
+  module: {
+    loaders: [
+      {
+        test: /\.js?$/,
+        loaders: ['react-hot', 'babel'],
+        exclude: /node_modules/
+      },
+    ]
+  },
+
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ]
 
 };

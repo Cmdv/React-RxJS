@@ -21,8 +21,18 @@ Inspired by [justinwoo](https://github.com/justinwoo) -> [react-rxjs-flow](https
 
 # Installing
 
-Run `npm install` + `npm start`.
-In your fave browser `open index.html`.
+Run `npm install`
+
+# Usage + Tests
+
+Run `npm start //start webpack-dev-server with react-hot-loader`
+
+Open another terminal tab and then
+
+`npm test //start testem + tape`
+
+
+In your favorite browser go to `localhost:3000`.
 
 
 # ToDos:
