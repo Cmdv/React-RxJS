@@ -1,10 +1,31 @@
-var test = require('tape');
+import test from 'tape';
+import React from 'react/addons';
+import Home from '../routes/Home.js';
 
-test('basic arithmetic', function(t) {
-  t.plan(4);
+const TestUtils = React.addons.TestUtils;
 
-  t.equal(2 + 3, 5);
-  t.equal(7 * 8 + 9, 65);
-  t.equal(1 + 2 , 3);
-  t.equal(3 + 4 , 7);
+const createComponent = (component, props, ...children) => {
+  const shallowRenderer = TestUtils.createRenderer();
+  const reactElement = React.createElement(
+    component,
+    props,
+    children.length > 1 ? children : children[0]
+    );
+
+  shallowRenderer.render(reactElement);
+  return shallowRenderer.getRenderOutput();
+};
+
+test('Home component type', t => {
+  
+  t.equal(createComponent(Home).type, 'div');
+  t.end();
+});
+
+test('Home title text', t => {
+  
+  const postTitle = createComponent(Home).props.children[0];
+ 
+  t.equal(postTitle.props.children, 'Welcome to React + RxJS');
+  t.end();
 });
