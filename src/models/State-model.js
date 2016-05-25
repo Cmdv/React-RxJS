@@ -1,34 +1,33 @@
-import Rx from 'rx';
+import Rx from 'rxjs';
 import update from 'react/lib/update';
 import IntentCounter from '../intent/Counter-intent';
 import IntentJSON from '../intent/json-intent';
-var subject = new Rx.ReplaySubject(1);
 
+const subject = new Rx.ReplaySubject(1);
 
-var state = {
+let state = {
   postResult: [],
   results: [],
   counter: 0
 };
 
-IntentCounter.subjects.incrementCounterSubject.subscribe(function () {
+IntentCounter.subjects.incrementCounterSubject.subscribe(()=> {
   state = update(state, {
     $merge: {
       counter: state.counter + 1
     }
   });
-  subject.onNext(state);
+  subject.next(state);
 });
 
-IntentCounter.subjects.decreaseCounterSubject.subscribe(function () {
+IntentCounter.subjects.decreaseCounterSubject.subscribe(()=> {
   state = update(state, {
     $merge: {
       counter: state.counter - 1
     }
   });
-  subject.onNext(state);
+  subject.next(state);
 });
-
 
 IntentJSON.jsonSubjects.goGetJSON.subscribe(data => {
   state = update(state, {
@@ -36,7 +35,7 @@ IntentJSON.jsonSubjects.goGetJSON.subscribe(data => {
       results: data
     }
   });
-  subject.onNext(state);
+  subject.next(state);
 });
 
 IntentJSON.jsonSubjects.goPostJSON.subscribe(data => {
@@ -45,10 +44,10 @@ IntentJSON.jsonSubjects.goPostJSON.subscribe(data => {
       postResult: data
     }
   });
-  subject.onNext(state);
+  subject.next(state);
 });
 
-subject.onNext(state);
+subject.next(state);
 
 export default {
   subject

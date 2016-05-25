@@ -1,27 +1,22 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Intent from '../intent/Counter-intent';
 
-var About = React.createClass({
-  handleIncrement () {
-    Intent.incrementCounter();
-  },
+const About = ({ counter }) => {
+  const handleIncrement = () => { Intent.incrementCounter(); };
 
-  handleDecrease () {
-    Intent.decreaseCounter();
-  },
+  const handleDecrease = ()=> { Intent.decreaseCounter(); };
 
-  render() {
-    return (
-        <div className="jumbotron text-center">
-          <h1>ABOUT</h1>
-          <div className="center-block text-center">
-            <h1>counter: {this.props.counter}</h1>
-            <button className="btn btn-lg btn-primary" onClick={this.handleDecrease}>decrease</button> {'  '}
-            <button className="btn btn-lg btn-primary" onClick={this.handleIncrement}>increment</button>
-          </div>
-        </div>
-    );
-  }
-});
+  return (
+    <div className="jumbotron text-center">
+      <h1>ABOUT</h1>
+      <div className="center-block text-center">
+        <h1>counter: {counter}</h1>
+        <button className="btn btn-lg btn-primary" onClick={handleDecrease}>decrease</button>
+           {'  '}
+        <button className="btn btn-lg btn-primary" onClick={handleIncrement}>increment</button>
+      </div>
+    </div>
+  );
+};
 
-module.exports = About;
+export default About;

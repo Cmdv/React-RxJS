@@ -1,13 +1,12 @@
-import Rx from 'rx';
+import Rx from 'rxjs';
 
-var subjects = {
+const subjects = {
   incrementCounterSubject: new Rx.Subject(),
   decreaseCounterSubject: new Rx.Subject()
-
 };
 
 export default {
   subjects,
-  incrementCounter: () => subjects.incrementCounterSubject.onNext(),
-  decreaseCounter: () => subjects.decreaseCounterSubject.onNext()
+  incrementCounter: () => subjects.incrementCounterSubject.next(),
+  decreaseCounter: () => subjects.decreaseCounterSubject.next()
 };

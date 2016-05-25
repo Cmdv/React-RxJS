@@ -49,7 +49,8 @@ Because of this any contributions are welcomed :)
 
 # Contributions
 
-[Denis Stoyanov](https://github.com/xgrommx) with some aditional ES6 + clarification
+- [Denis Stoyanov](https://github.com/xgrommx) with some aditional ES6 + clarification
+- [geminiyellow](https://github.com/geminiyellow/React-RxJS)
 
 To get the React-router working I had great advice from:
 [BerkeleyTrue](https://github.com/r3dm/thundercats) on this git issue -> [git post](https://github.com/rackt/react-router/issues/1230)<br>

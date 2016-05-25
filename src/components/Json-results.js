@@ -1,36 +1,30 @@
-import React from 'react';
-import Intent from '../intent/json-intent';
+import React, { PropTypes } from 'react';
 
-var JsonResults = React.createClass({
-  handlePostJSON(data) {
+const JsonResults = ({ results }) => {
+
+  const handlePostJSON = ({ event }) => {
     //function for sending JSON call just need to grab input.value and make a Math.random for the keys of each object
-
-    console.log('getJSON' + data.event);
+    console.log(`getJSON ${event}`);
     //Intent.getJSON('bets', {bet_id: data.bet_id, odds: data.odds, stake: data.stake});
-  },
+  };
 
-  render() {
-    var jsonData = this.props.results;
+  const jsonData = results || [];
 
-    var loopResults = () =>
-      jsonData.map(data =>
-          (
-            <li className="list-group-item" key={data.id + 2}>
-              <h4 className="list-group-item-heading" key={data.id}>{data.title}</h4>
+  const loopResults = () =>
+    jsonData.map(({ id, title, body }) => (
+      <li className="list-group-item" key={id + 2}>
+        <h4 className="list-group-item-heading" key={id}>{title}</h4>
+        <p className="list-group-item-text" key={title}>{body}</p>
+      </li>
+    ));
 
-              <p className="list-group-item-text" key={data.title}>{data.body}</p>
-            </li>
-          )
-      );
+  return (
+    <div>
+      <ul className="list-group">
+        {loopResults()}
+      </ul>
+    </div>
+  );
+};
 
-    return (
-      <div>
-        <ul className="list-group">
-          {loopResults()}
-        </ul>
-      </div>
-    )
-  }
-});
-
-module.exports = JsonResults;
+export default JsonResults;
